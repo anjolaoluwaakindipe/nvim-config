@@ -12,7 +12,7 @@ keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 -- delete whole word in insert mode
-keymap.set("i", "<C-BS>", "<C-W>")
+keymap.set("i", "<C-bs>", "<C-w>")
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')

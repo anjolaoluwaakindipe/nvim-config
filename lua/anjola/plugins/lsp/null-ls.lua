@@ -13,6 +13,7 @@ null_ls.setup({
 		formatting.prettier, -- javascript, typescript, and more
 		formatting.stylua, -- lua
 		formatting.gofumpt, -- go
+		formatting.rustfmt, -- rust
 		diagnostics.eslint_d, -- javascript typescript
 	},
 	-- configure format on save
