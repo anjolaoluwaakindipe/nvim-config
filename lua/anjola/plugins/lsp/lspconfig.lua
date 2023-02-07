@@ -110,6 +110,7 @@ lspconfig["sumneko_lua"].setup({
 	},
 })
 
+-- golang
 lspconfig["gopls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
@@ -120,6 +121,7 @@ lspconfig["golangci_lint_ls"].setup({
 	on_attach = on_attach,
 })
 
+-- rust
 lspconfig["rust_analyzer"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
@@ -139,6 +141,19 @@ lspconfig["rust_analyzer"].setup({
 	},
 })
 
+local setup, rt = pcall(require, "rust-tools")
+
+if not setup then
+	return
+end
+
+rt.setup({
+	server = {
+		on_attach = on_attach,
+	},
+})
+
+-- python
 lspconfig["pyright"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
