@@ -129,6 +129,14 @@ lspconfig["rust_analyzer"].setup({
 		"stable",
 		"rust-analyzer",
 	},
+	diagnostics = {
+		enable = true,
+	},
+	inlay_hints = {
+		type_hints = true,
+		chaining_hints = true,
+		parameter_hints = true,
+	},
 })
 
 lspconfig["pyright"].setup({
